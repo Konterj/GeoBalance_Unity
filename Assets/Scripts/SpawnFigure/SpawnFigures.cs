@@ -24,9 +24,6 @@ public class SpawnFigures : MonoBehaviour
     }
     public void OnRandomSpawn()
     {
-
-        /* Setting.OnRandomHeight(figures); //Set mass
-         Setting.OnRandomSize(ref SizeFigures); //set mass figures*/
         //Set Random position
         Setting.OnRandomMassAndSize(ref SizeFigures, figures, ref AvergeValueForScaleMass, ref AvergeValueForScaleMass);
         int SpawnPointRandom = Random.Range(0, SpawnPoints.Count);
@@ -41,7 +38,7 @@ public class SpawnFigures : MonoBehaviour
             Shape.GetComponent<Rigidbody2D>().mass = AvergeValueForScaleMass;
             Shape.transform.localScale = SizeFigures;
             Debug.Log($"This script, SpawnFigure, OnRadnomSpawn. " +
-$"Scale: {AvergeValueForScaleMass}, Mass: {AvergeValueForScaleMass}, Real Mass figure {Shape.GetComponent<Rigidbody2D>().mass}");
+            $"Scale: {AvergeValueForScaleMass}, Mass: {AvergeValueForScaleMass}, Real Mass figure {Shape.GetComponent<Rigidbody2D>().mass}");
         }
 
 
