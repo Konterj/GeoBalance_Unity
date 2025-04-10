@@ -1506,7 +1506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform: {fileID: 1932776109}
-  SpeedRotated: 5
+  SpeedRotated: 200
+  MaxAngularVelocity: 80
+  debug: {fileID: 276851889}
 --- !u!1 &1740820998
 GameObject:
   m_ObjectHideFlags: 0
