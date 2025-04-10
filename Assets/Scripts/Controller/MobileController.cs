@@ -11,7 +11,7 @@ public class MobileController : MonoBehaviour
 
     public float RotationSpeed = 5;
     public float VelocityRoteted;
-    public Rigidbody2D RotatedVeloc;
+    public Rigidbody2D platform;
     public RectTransform GetRectRight;
     public RectTransform GetRectLeft;
 
@@ -44,18 +44,18 @@ public class MobileController : MonoBehaviour
         OnCalcueRotatedTouch();
         OnCalcueMovingFingerId();
         //Left side
-        if (touchLeft == 1 && RotatedVeloc.rotation < 80)
+        if (touchLeft == 1 && platform.rotation < 80)
         {
-            RotatedVeloc.AddTorque(touchLeft * RotationSpeed * Time.fixedDeltaTime);
+            platform.AddTorque(touchLeft * RotationSpeed * Time.fixedDeltaTime);
         }
         //Right side
-        else if (touchRight == -1 && RotatedVeloc.rotation > -80)
+        else if (touchRight == -1 && platform.rotation > -80)
         {
-            RotatedVeloc.AddTorque(touchRight * RotationSpeed * Time.fixedDeltaTime);
+            platform.AddTorque(touchRight * RotationSpeed * Time.fixedDeltaTime);
         }
-        if(RotatedVeloc.angularVelocity > 180 || RotatedVeloc.angularVelocity < -180)
+        if(platform.angularVelocity > 180 || platform.angularVelocity < -180)
         {
-            RotatedVeloc.angularVelocity *= 0.95f;
+            platform.angularVelocity *= 0.95f;
         }
     }
     public void OnCalcueRotatedTouch()
