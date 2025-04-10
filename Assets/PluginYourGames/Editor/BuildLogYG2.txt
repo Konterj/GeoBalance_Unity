@@ -1,0 +1,3 @@
+Build path: E:/Project unity/GeoBalance/Build_Test
+Build number: 7
+PluginYG version: 2.0032
