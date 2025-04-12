@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 348450052}
   - component: {fileID: 348450054}
   m_Layer: 0
-  m_Name: GameMangerContrl
+  m_Name: GameManger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -574,9 +574,10 @@ MonoBehaviour:
   controllers:
   - name: PC_Controller
     ControllerList: {fileID: 2139863298}
+    ObjectUI: {fileID: 971765443}
   - name: Mobile_Controller
-    ControllerList: {fileID: 2139863298}
-  IsMobile: 0
+    ControllerList: {fileID: 423397882}
+    ObjectUI: {fileID: 983225824}
 --- !u!1 &395187612
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &423397881
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,7 +1211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &971765444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1498,7 +1499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1731515872
 Transform:
   m_ObjectHideFlags: 0

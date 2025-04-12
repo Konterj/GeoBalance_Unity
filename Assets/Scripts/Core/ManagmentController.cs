@@ -16,16 +16,16 @@ public class ManagmentController : MonoBehaviour
         if (IsMobile)
         {
             Debug.Log("Is mobile");
-            controllers[0].GetObject.SetActive(false);
-            controllers[1].Equals(true);
-            controllers[1].GetObject.SetActive(true);
+            controllers[0].ObjectUI.SetActive(false);
+            controllers[1].ControllerList.enabled = true;
+            controllers[1].ObjectUI.SetActive(true);
         }
         else if(!IsMobile)
         {
             Debug.Log("Is not mobile");
-            controllers[0].Equals(true);
-            controllers[0].GetObject.SetActive(true);
-            controllers[1].GetObject.SetActive(false);
+            controllers[0].ControllerList.enabled=true;
+            controllers[0].ObjectUI.SetActive(true);
+            controllers[1].ObjectUI.SetActive(false);
         }
     }
 }
@@ -35,5 +35,5 @@ public class Controller
 {
     public string name;
     public MonoBehaviour ControllerList;
-    public GameObject GetObject;
+    public GameObject ObjectUI;
 }
