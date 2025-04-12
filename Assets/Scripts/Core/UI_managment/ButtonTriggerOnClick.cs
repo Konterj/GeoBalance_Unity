@@ -22,7 +22,9 @@ public class ButtonTriggerOnClick : MonoBehaviour
     public enum actionOnClick
     {
         AnimateOut,
-        AnimateIn
+        AnimateIn,
+        AnimateAllIn,
+        AnimateAllOut
     };
 
     private Button button;
@@ -65,7 +67,17 @@ public class ButtonTriggerOnClick : MonoBehaviour
             case actionOnClick.AnimateOut:
                 uiController.AnimateOut(targetElementName); 
                 break;
-            case actionOnClick.AnimateIn: uiController.AnimateIn(targetElementName);
+            case actionOnClick.AnimateIn: 
+                uiController.AnimateIn(targetElementName);
+                break;
+            case actionOnClick.AnimateAllIn:
+                // Анимировать ВСЕ элементы, определенные в контроллере
+                uiController.AnimateAllIn();
+                break;
+
+            case actionOnClick.AnimateAllOut:
+                // Анимировать ВСЕ элементы, определенные в контроллере
+                uiController.AnimateAllOut(); // Вызываем новый метод
                 break;
             default:
                 Debug.LogWarning($"'{gameObject.name}': Неизвестное действие '{ActionOnClick}'", this);

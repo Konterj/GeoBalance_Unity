@@ -14,6 +14,8 @@ public class UI_ELEMENTS
     public AnimationCurve movePose;
     [Tooltip("Кривая по умолчанию для анимации затухания (альфа-канала)")]
     public AnimationCurve fadeOut;
+    [Tooltip("Кривая по умолчанию для анимации появления (альфа-канала)")]
+    public AnimationCurve fadeIn;
     [Header("Object reference")]
     [Tooltip("Ссылка на компонент которая отвечает за размер, и положение")]
     public RectTransform ObjectUI;
@@ -26,11 +28,12 @@ public class UI_ELEMENTS
     [HideInInspector] public Vector2 originalPose;
     [HideInInspector] public float originalAlpha = 1f;
 
+
     public void OnSetDefaultValue()
     {
         if(ObjectUI != null)
         {
-            originalPose = ObjectUI.position;
+            originalPose = ObjectUI.anchoredPosition;
         }
         if(canvasGroup != null)
         {
