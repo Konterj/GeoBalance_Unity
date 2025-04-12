@@ -7,17 +7,29 @@ public class GameManager : MonoBehaviour
     public SpawnFigures spawnFigures;
     public FigureSetting figureSetting;
     public ManagmentController managmentController;
-    // Start is called before the first frame update
-    void Start()
-    {
-        spawnFigures.Setting = figureSetting;
-        spawnFigures.OnStartSpawn();
-        managmentController.SetController();
-    }
 
+    //Var private
+    bool isPlay = false;
+    
     // Update is called once per frame
     void Update()
     {
-        spawnFigures.OnUpdateTimerSpawn();
+        OnUpdateTimerForSpawn();
+    }
+
+    public void OnUpdateTimerForSpawn()
+    {
+        if (isPlay)
+        {
+            spawnFigures.OnUpdateTimerSpawn();
+        }
+    }
+
+    public void OnPlayButtonGame()
+    {
+        isPlay = true;
+        managmentController.SetController();
+        spawnFigures.Setting = figureSetting;
+        spawnFigures.OnStartSpawn();
     }
 }

@@ -1,26 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ManagmentController : MonoBehaviour
 {
     public List<Controller> controllers;
-
-
+    public bool isMobile = true;
+    
     public void SetController()
     {
-        bool IsMobile = Application.isMobilePlatform;
+
+        //bool IsMobile = Application.isMobilePlatform;
         for (int i = 0; i < controllers.Count; i++) 
         {
             controllers[i].ControllerList.enabled = false;
         }
-        if (IsMobile)
+        if (isMobile)
         {
             Debug.Log("Is mobile");
             controllers[0].ObjectUI.SetActive(false);
             controllers[1].ControllerList.enabled = true;
             controllers[1].ObjectUI.SetActive(true);
         }
-        else if(!IsMobile)
+        else if(!isMobile)
         {
             Debug.Log("Is not mobile");
             controllers[0].ControllerList.enabled=true;
