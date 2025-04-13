@@ -12,18 +12,10 @@ public class Panel_Ui_State : MonoBehaviour
 [System.Serializable]
 public class ElementPanel
 {
-    public string name;
-    public GameObject panel;
-    public CanvasGroup canvasGroup;
-    public float originalAlphaChannel;
+    public string Name;
+    public List<ElementAnimate> Animate;
+    public GameObject SetPanelActive;
+    public enum SetActive { ActivePanelOn, ActivePanelOff };
+    public SetActive setAnim;
 
-    public void OnSetDefaultValue()
-    {
-        if(canvasGroup == null)
-        {
-            panel.AddComponent<CanvasGroup>();
-            canvasGroup = panel.GetComponent<CanvasGroup>();
-            originalAlphaChannel = canvasGroup.alpha;
-        }
-    }
 }
