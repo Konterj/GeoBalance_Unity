@@ -507,10 +507,6 @@ MonoBehaviour:
   spawnFigures: {fileID: 348450052}
   figureSetting: {fileID: 348450053}
   managmentController: {fileID: 348450054}
-  mainMenuState: {fileID: 0}
-  gameplayUiState: {fileID: 0}
-  gameOverState: {fileID: 0}
-  settingsState: {fileID: 0}
 --- !u!4 &348450051
 Transform:
   m_ObjectHideFlags: 0
@@ -593,15 +589,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 348450049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d3d6ebe81764f949b7c96095cd02378, type: 3}
+  m_Script: {fileID: 11500000, guid: 725da657fb2f1524ebb8a6122643fd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiElements:
-  - name: Play
-    description: "\u043A\u043D\u043E\u043F\u043A\u0430 \u0434\u043B\u044F \u0441\u0442\u0430\u0440\u0442\u0430
-      \u0438\u0433\u0440\u044B"
-    audioClip: {fileID: 0}
-    movePose:
+  elementAnim:
+  - name: Btn_Play
+    canvasAlpha: {fileID: 422996898}
+    moveEffect:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -614,10 +608,10 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5069202
-        value: -0.14178514
-        inSlope: 1.0179602
-        outSlope: 1.0179602
+        time: 0.6175395
+        value: -0.052641377
+        inSlope: 0.91743773
+        outSlope: 0.91743773
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -634,7 +628,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    fadeOut:
+    FadeEffect:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -646,72 +640,6 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    fadeIn:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ObjectUI: {fileID: 1254100348}
-    canvasGroup: {fileID: 422996898}
-    targetPos: {x: 0, y: -120}
-    originalPose: {x: 0, y: 0}
-    originalAlpha: 0
-  - name: Btn_Settings
-    description: "\u043A\u043D\u043E\u043F\u043A\u0430 \u0434\u043B\u044F\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043A
-      \u0438\u0433\u0440\u044B"
-    audioClip: {fileID: 0}
-    movePose:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.43937698
-        value: -0.08926737
-        inSlope: 1.0654914
-        outSlope: 1.0654914
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.82435334
       - serializedVersion: 3
         time: 1
         value: 1
@@ -724,150 +652,13 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    fadeOut:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    fadeIn:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ObjectUI: {fileID: 1854120791}
-    canvasGroup: {fileID: 422996898}
-    targetPos: {x: -174, y: 120}
-    originalPose: {x: 0, y: 0}
-    originalAlpha: 0
-  - name: Btn_Records
-    description: "\u043A\u043D\u043E\u043F\u043A\u0430 \u0434\u043B\u044F \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435
-      \u0440\u0435\u043A\u043E\u0440\u0434\u043E\u0432"
-    audioClip: {fileID: 0}
-    movePose:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.43937698
-        value: -0.08926737
-        inSlope: 1.0654914
-        outSlope: 1.0654914
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.82435334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    fadeOut:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    fadeIn:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ObjectUI: {fileID: 1442536034}
-    canvasGroup: {fileID: 422996898}
-    targetPos: {x: -174, y: 120}
-    originalPose: {x: 0, y: 0}
-    originalAlpha: 0
-  defaultDuration: 0.5
+    objectUI: {fileID: 1254100348}
+    Duration: 1
+    startPose: {x: 0, y: 0}
+    endPose: {x: 0, y: -120}
+    CurrentTime: 0
+    OriginalAlpha: 0
+    SetAnim: 1
 --- !u!1 &395187612
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +702,6 @@ GameObject:
   - component: {fileID: 422996900}
   - component: {fileID: 422996899}
   - component: {fileID: 422996898}
-  - component: {fileID: 422996901}
   m_Layer: 5
   m_Name: Panel_Start_Game
   m_TagString: Untagged
@@ -992,30 +782,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422996896}
   m_CullTransparentMesh: 1
---- !u!114 &422996901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422996896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9dd625c75c01f41869672577bc0337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetElementName: 
-  UIPane_On: {fileID: 0}
-  UIPanel_Off: {fileID: 0}
-  controller: {fileID: 0}
-  overrideShowDuration: -1
-  overrideHideDuration: -1
-  OnShowAnimationComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHideAnimationComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &423397880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,7 +1288,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636366578}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1895,7 +1661,6 @@ GameObject:
   - component: {fileID: 1254100351}
   - component: {fileID: 1254100350}
   - component: {fileID: 1254100349}
-  - component: {fileID: 1254100352}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1967,9 +1732,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1254100352}
-        m_TargetAssemblyTypeName: ButtonTriggerOnClick, Assembly-CSharp
-        m_MethodName: HandleClick
+      - m_Target: {fileID: 348450050}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPlayButtonGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 348450055}
+        m_TargetAssemblyTypeName: Animation_On_Click, Assembly-CSharp
+        m_MethodName: OnAnimateOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2017,21 +1794,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254100347}
   m_CullTransparentMesh: 1
---- !u!114 &1254100352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254100347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5efe8350f7b0441b1ed6899180bd56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiController: {fileID: 348450055}
-  targetElementName: Play
-  ActionOnClick: 3
 --- !u!1 &1331451237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,7 +1913,6 @@ GameObject:
   - component: {fileID: 1442536038}
   - component: {fileID: 1442536037}
   - component: {fileID: 1442536036}
-  - component: {fileID: 1442536035}
   m_Layer: 5
   m_Name: Records
   m_TagString: Untagged
@@ -2179,21 +1940,6 @@ RectTransform:
   m_AnchoredPosition: {x: -174, y: -406.59}
   m_SizeDelta: {x: 266.81934, y: 266.81934}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1442536035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442536033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5efe8350f7b0441b1ed6899180bd56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiController: {fileID: 348450055}
-  targetElementName: Btn_Records
-  ActionOnClick: 0
 --- !u!114 &1442536036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2432,7 +2178,6 @@ GameObject:
   - component: {fileID: 1584933675}
   - component: {fileID: 1584933674}
   - component: {fileID: 1584933673}
-  - component: {fileID: 1584933676}
   m_Layer: 5
   m_Name: Pause_Btn
   m_TagString: Untagged
@@ -2457,7 +2202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -174, y: 127}
+  m_AnchoredPosition: {x: -188.27, y: 105.9}
   m_SizeDelta: {x: 376.54, y: 211.8053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584933673
@@ -2542,21 +2287,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584933671}
   m_CullTransparentMesh: 1
---- !u!114 &1584933676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584933671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5efe8350f7b0441b1ed6899180bd56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiController: {fileID: 348450055}
-  targetElementName: Panel_Begin
-  ActionOnClick: 1
 --- !u!1 &1731515871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,7 +2455,6 @@ GameObject:
   - component: {fileID: 1854120794}
   - component: {fileID: 1854120793}
   - component: {fileID: 1854120792}
-  - component: {fileID: 1854120795}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2835,21 +2564,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854120790}
   m_CullTransparentMesh: 1
---- !u!114 &1854120795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854120790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5efe8350f7b0441b1ed6899180bd56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiController: {fileID: 348450055}
-  targetElementName: Btn_Settings
-  ActionOnClick: 0
 --- !u!1 &1932776102
 GameObject:
   m_ObjectHideFlags: 0
