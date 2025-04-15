@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 348450052}
   - component: {fileID: 348450054}
   - component: {fileID: 348450055}
+  - component: {fileID: 348450056}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -592,271 +593,407 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725da657fb2f1524ebb8a6122643fd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementAnim:
-  - name: PanelStart
-    canvasAlpha: {fileID: 422996898}
-    moveEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.50516427
-        value: -0.1302215
-        inSlope: 0.63532853
-        outSlope: 0.63532853
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    FadeEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    objectUI: {fileID: 1854120791}
-    Duration: 0.5
-    startPose: {x: 0, y: 0}
-    endPose: {x: -174, y: 120}
-    CurrentTime: 0
-    OriginalAlpha: 0
-    SetAnim: 1
-  - name: PanelStart
-    canvasAlpha: {fileID: 422996898}
-    moveEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.50516427
-        value: -0.1302215
-        inSlope: 0.63532853
-        outSlope: 0.63532853
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    FadeEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    objectUI: {fileID: 1442536034}
-    Duration: 0.5
-    startPose: {x: 0, y: 0}
-    endPose: {x: -174, y: 120}
-    CurrentTime: 0
-    OriginalAlpha: 0
-    SetAnim: 1
-  - name: PanelStart
-    canvasAlpha: {fileID: 422996898}
-    moveEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.50516427
-        value: -0.1302215
-        inSlope: 0.63532853
-        outSlope: 0.63532853
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    FadeEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    objectUI: {fileID: 1254100348}
-    Duration: 0.5
-    startPose: {x: 0, y: 0}
-    endPose: {x: 0, y: -120}
-    CurrentTime: 0
-    OriginalAlpha: 0
-    SetAnim: 1
-  - name: PanelStart
-    canvasAlpha: {fileID: 636366582}
-    moveEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.50516427
-        value: -0.1302215
-        inSlope: 0.63532853
-        outSlope: 0.63532853
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    FadeEffect:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    objectUI: {fileID: 1173759861}
-    Duration: 0.5
-    startPose: {x: 0, y: 0}
-    endPose: {x: -174, y: -120}
-    CurrentTime: 0
-    OriginalAlpha: 0
-    SetAnim: 0
+  elementAnim: []
+  groups:
+  - name: Panel_Start
+    elements:
+    - name: Play_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1254100348}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: 0, y: -120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Settings_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1854120791}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: 120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Records_btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1442536034}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: 120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Pause_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1173759861}
+      Duration: 2
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: -160}
+      OriginalAlpha: 0
+      SetAnim: 1
+  - name: panel_Setting
+    elements:
+    - name: Play_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1254100348}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: 0, y: -120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Settings_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1854120791}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: 120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Records_btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.50516427
+          value: -0.1302215
+          inSlope: 0.63532853
+          outSlope: 0.63532853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1442536034}
+      Duration: 1
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: 120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Pause_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1173759861}
+      Duration: 2
+      startPose: {x: 0, y: 0}
+      endPose: {x: -174, y: -160}
+      OriginalAlpha: 0
+      SetAnim: 1
+  state: {fileID: 348450056}
+--- !u!114 &348450056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348450049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9dd625c75c01f41869672577bc0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel:
+  - Name: PanelStartOff
+    FirstPanel: {fileID: 422996896}
+    LastPanel: {fileID: 636366578}
+    setActiveFirst: 1
+    setActiveLast: 0
 --- !u!1 &395187612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,14 +2201,26 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 348450055}
         m_TargetAssemblyTypeName: Animation_On_Click, Assembly-CSharp
-        m_MethodName: OnStartAnim
-        m_Mode: 1
+        m_MethodName: OnStartAnimationGroup
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Panel_Start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 348450056}
+        m_TargetAssemblyTypeName: Panel_Ui_State, Assembly-CSharp
+        m_MethodName: OnSetNameElement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PanelStartOff
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1254100350

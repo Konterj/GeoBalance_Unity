@@ -15,14 +15,14 @@ public class ManagmentController : MonoBehaviour
         {
             controllers[i].ControllerList.enabled = false;
         }
-        if (isMobile)
+        if (Application.isMobilePlatform)
         {
             Debug.Log("Is mobile");
             controllers[0].ObjectUI.SetActive(false);
             controllers[1].ControllerList.enabled = true;
             controllers[1].ObjectUI.SetActive(true);
         }
-        else if(!isMobile)
+        else if(!Application.isMobilePlatform)
         {
             Debug.Log("Is not mobile");
             controllers[0].ControllerList.enabled=true;
