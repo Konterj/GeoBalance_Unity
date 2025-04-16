@@ -20,6 +20,11 @@ MonoBehaviour:
     uniqueID: 000
     playerPhoto: demo image
     payingStatus: 0
+  Storage:
+    saveLocal: 1
+    saveCloud: 1
+    saveCloudInterval: 0
+    flush: 0
   Basic:
     platform: {fileID: 11400000, guid: c2a303d33a9fd394bae4c4b88b9a1c44, type: 2}
     autoApplySettings: 1
@@ -69,6 +74,8 @@ MonoBehaviour:
   platformInfo:
     ownHost: 0
   platformToggles:
+    saveLocal: 0
+    saveCloud: 0
     selectWebGLTemplate: 1
     runInBackground: 1
     enableExceptions: 1

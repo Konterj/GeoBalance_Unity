@@ -76,6 +76,7 @@ public class Animation_On_Click : MonoBehaviour
         }
 
         Debug.Log("✅ All animations in group completed.");
+        elements.Clear();
         state.OnSetActivePanel();
     }
 
@@ -117,6 +118,7 @@ public class Animation_On_Click : MonoBehaviour
 
         if (element.objectUI != null)
         {
+            
             element.objectUI.anchoredPosition = element.endPose;
         }
     }
@@ -178,7 +180,7 @@ public class ElementAnimate
 
     public float Duration = 0.5f;
 
-    [HideInInspector] public Vector2 startPose;
+    public Vector2 startPose;
     public Vector2 endPose;
 
     [HideInInspector] public float OriginalAlpha;
@@ -197,7 +199,10 @@ public class ElementAnimate
     {
         if (objectUI != null)
         {
-            startPose = objectUI.anchoredPosition;
+            if (startPose == Vector2.zero) 
+            {
+                startPose = objectUI.anchoredPosition;
+            }
         }
 
         if (canvasAlpha != null)
