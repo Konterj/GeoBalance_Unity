@@ -330,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 348450050}
   controller: {fileID: 348450057}
+  click: {fileID: 348450055}
 --- !u!1 &130890916
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,17 +510,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206201582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 852474712}
-  m_RootOrder: 1
+  m_Father: {fileID: 1833826563}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000020981, y: -423}
+  m_AnchoredPosition: {x: 0.000020981, y: -107.09845}
   m_SizeDelta: {x: 569.9213, y: 142.4803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206201584
@@ -861,6 +862,9 @@ MonoBehaviour:
   managmentController: {fileID: 348450054}
   timerController: {fileID: 348450057}
   _Click: {fileID: 348450055}
+  state: {fileID: 348450056}
+  trash: {fileID: 63290885}
+  GetPlatform: {fileID: 1932776110}
   isPlay: 0
 --- !u!4 &348450051
 Transform:
@@ -995,7 +999,7 @@ MonoBehaviour:
         m_RotationOrder: 0
       objectUI: {fileID: 1254100348}
       Duration: 1
-      startPose: {x: 0, y: 0}
+      startPose: {x: 0, y: 120}
       endPose: {x: 0, y: -120}
       OriginalAlpha: 0
       SetAnim: 1
@@ -1467,7 +1471,7 @@ MonoBehaviour:
         m_RotationOrder: 0
       objectUI: {fileID: 130890917}
       Duration: 2
-      startPose: {x: 0, y: -140}
+      startPose: {x: 0, y: -160}
       endPose: {x: 0, y: 240}
       OriginalAlpha: 0
       SetAnim: 1
@@ -1536,6 +1540,196 @@ MonoBehaviour:
       endPose: {x: 0, y: 0}
       OriginalAlpha: 0
       SetAnim: 1
+  - name: Panel_Restart
+    elements:
+    - name: Panel_GameOver
+      canvasAlpha: {fileID: 636366582}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 852474712}
+      Duration: 2
+      startPose: {x: 0, y: 0.0001}
+      endPose: {x: 0, y: 1078.7}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Play_BTNW
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1254100348}
+      Duration: 2
+      startPose: {x: 0, y: -120}
+      endPose: {x: 0, y: 120}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: setting_Btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1854120791}
+      Duration: 2
+      startPose: {x: -174, y: 120}
+      endPose: {x: -174, y: -157}
+      OriginalAlpha: 0
+      SetAnim: 1
+    - name: Records_btn
+      canvasAlpha: {fileID: 422996898}
+      moveEffect:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.4924698
+          value: 1.0124655
+          inSlope: 2.3669274
+          outSlope: 2.3669274
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10315988
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      FadeEffect:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      objectUI: {fileID: 1442536034}
+      Duration: 2
+      startPose: {x: -174, y: 120}
+      endPose: {x: -174, y: -406}
+      OriginalAlpha: 0
+      SetAnim: 1
   state: {fileID: 348450056}
 --- !u!114 &348450056
 MonoBehaviour:
@@ -1554,6 +1748,12 @@ MonoBehaviour:
     FirstPanel: {fileID: 422996896}
     LastPanel: {fileID: 636366578}
     setActiveFirst: 1
+    setActiveLast: 0
+  panelList:
+  - Name: GameOver
+    FirstPanel: {fileID: 852474711}
+    LastPanel: {fileID: 422996896}
+    setActiveFirst: 0
     setActiveLast: 0
 --- !u!114 &348450057
 MonoBehaviour:
@@ -2341,16 +2541,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1833826563}
-  - {fileID: 206201583}
-  - {fileID: 957802194}
-  - {fileID: 1655244258}
   m_Father: {fileID: 636366579}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1080}
-  m_SizeDelta: {x: 0, y: -0.0050049}
+  m_AnchoredPosition: {x: -0.00012207031, y: 1246.8}
+  m_SizeDelta: {x: 0, y: -0.00018311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &853551077
 GameObject:
@@ -2439,17 +2636,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957802193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 852474712}
+  m_Father: {fileID: 1833826563}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 752, y: 402}
+  m_AnchoredPosition: {x: 160.67033, y: 98.209694}
   m_SizeDelta: {x: 253.42072, y: 34.380096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957802195
@@ -2834,7 +3031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165.1644, y: -64.265}
+  m_AnchoredPosition: {x: -165.1644, y: -39}
   m_SizeDelta: {x: 163.645, y: 86.355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238317318
@@ -2970,7 +3167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: 189.9204, y: 189.9204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254100349
@@ -3234,7 +3431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -174, y: -406.59}
+  m_AnchoredPosition: {x: -174, y: -406}
   m_SizeDelta: {x: 266.81934, y: 266.81934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442536036
@@ -3622,18 +3819,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 348450050}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnPlayButtonGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 348450055}
         m_TargetAssemblyTypeName: Animation_On_Click, Assembly-CSharp
         m_MethodName: OnStartAnimationGroup
@@ -3643,19 +3828,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Panel_Start
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 348450056}
-        m_TargetAssemblyTypeName: Panel_Ui_State, Assembly-CSharp
-        m_MethodName: OnSetNameElement
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PanelStartOff
+          m_StringArgument: Panel_Restart
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1599292012
@@ -3721,18 +3894,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655244257}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1599292010}
-  m_Father: {fileID: 852474712}
-  m_RootOrder: 3
+  m_Father: {fileID: 1833826563}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -767.80005, y: 402}
+  m_AnchoredPosition: {x: -179, y: 98.21}
   m_SizeDelta: {x: 253.42065, y: 34.380096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655244259
@@ -3808,7 +3981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 78.3772, y: 159.37717}
+  m_AnchoredPosition: {x: 78.3772, y: 184.64206}
   m_SizeDelta: {x: 86.416, y: 86.416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667480531
@@ -4037,6 +4210,9 @@ RectTransform:
   m_Children:
   - {fileID: 1667480530}
   - {fileID: 1238317317}
+  - {fileID: 957802194}
+  - {fileID: 206201583}
+  - {fileID: 1655244258}
   m_Father: {fileID: 852474712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4217,6 +4393,7 @@ GameObject:
   - component: {fileID: 1932776105}
   - component: {fileID: 1932776109}
   - component: {fileID: 1932776108}
+  - component: {fileID: 1932776110}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -4370,6 +4547,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1932776110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932776102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e88427fc3b74d64babdda786bdae379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platform: {fileID: 1932776108}
+  minFrequency: 0.05
+  maxFrequency: 5
+  DurationSmooth: 1
+  LerpTime: 0
 --- !u!1 &2002116741
 GameObject:
   m_ObjectHideFlags: 0

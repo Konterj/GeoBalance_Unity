@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static ElementAnimate;
 
 public class Animation_On_Click : MonoBehaviour
@@ -28,7 +29,6 @@ public class Animation_On_Click : MonoBehaviour
             }
         }
     }
-
     public void OnStartAnimationGroup(string groupName)
     {
         var group = groups.Find(g => g.name == groupName);
@@ -67,6 +67,10 @@ public class Animation_On_Click : MonoBehaviour
 
         foreach (var element in elements)
         {
+            if(element.objectUI.GetComponent<Button>() != null)
+            {
+                element.objectUI.GetComponent<Button>().enabled = false;
+            }
             coroutines.Add(StartCoroutine(PlaySingleElement(element)));
         }
 
@@ -74,10 +78,16 @@ public class Animation_On_Click : MonoBehaviour
         {
             yield return c;
         }
-
+        foreach (var element in elements)
+        {
+            if (element.objectUI.GetComponent<Button>() != null)
+            {
+                Debug.Log("ObjectUI true button");
+                element.objectUI.GetComponent<Button>().enabled = true;
+            }
+        }
         Debug.Log("✅ All animations in group completed.");
-        elements.Clear();
-        state.OnSetActivePanel();
+        //state.OnSetActivePanel();
     }
 
     private IEnumerator PlaySingleElement(ElementAnimate element)
@@ -112,7 +122,7 @@ public class Animation_On_Click : MonoBehaviour
             {
                 element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
             }
-
+            Debug.Log("Change start pose in end pose");
             yield return null;
         }
 
@@ -213,5 +223,11 @@ public class ElementAnimate
         {
             OriginalAlpha = 1f;
         }
+    }
+
+    public void OnSetValueForButton()
+    {
+        startPose = objectUI.anchoredPosition;
+        OriginalAlpha = canvasAlpha.alpha;
     }
 }

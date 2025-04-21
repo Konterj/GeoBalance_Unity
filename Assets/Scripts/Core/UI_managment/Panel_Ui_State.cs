@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Panel_Ui_State : MonoBehaviour
 {
+    [Header("Вызов по нажатию")]
     public List<ElementPanel> panel;
+    [Header("Вызов по событию, когда панель становится активным")]
+    public List<ElementPanel> panelList;
 
     private ElementPanel currentPanel;
 
@@ -27,6 +30,22 @@ public class Panel_Ui_State : MonoBehaviour
         else if(currentPanel.setActiveLast == ElementPanel.SetActive.ActivePanelOff)
         {
             currentPanel.LastPanel.SetActive(false);
+        }
+    }
+
+    public void OnSetActivePanelWhenActivePanel(string name)
+    {
+        var PanelAcitve = panelList.Find(p => p.Name == name);
+        if(PanelAcitve.FirstPanel.activeSelf)
+        {
+            if(PanelAcitve.setActiveLast == ElementPanel.SetActive.ActivePanelOff)
+            {
+                PanelAcitve.LastPanel.SetActive(false);
+            }
+            else if(PanelAcitve.setActiveLast == ElementPanel.SetActive.ActivePanelOn)
+            {
+                PanelAcitve.LastPanel.SetActive(true);
+            }
         }
     }
 

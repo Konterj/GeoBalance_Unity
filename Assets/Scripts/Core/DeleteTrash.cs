@@ -6,15 +6,14 @@ public class DeleteTrash : MonoBehaviour
 {
     public GameManager manager;
     public Timer_Controller controller;
+    public Animation_On_Click click;
     bool isFall = false;
-    bool isLastmove = false;
+    bool isLastmove = true;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isFall = true;
-        isLastmove = true;
         if (isFall)
         {
-            manager.OnShowPanelGameOver();
             if (isLastmove) 
             {
                 manager.OnShowPanelGameOver();
@@ -22,8 +21,11 @@ public class DeleteTrash : MonoBehaviour
                 Debug.Log("this is last fall");
             }
         }
-        manager.OnShowPanelGameOver();
-        controller.OnSaveValueTimerLast();
         Destroy(collision.gameObject);
+    }
+
+    public void OnStartTrueLastObject()
+    {
+        isLastmove=true;
     }
 }

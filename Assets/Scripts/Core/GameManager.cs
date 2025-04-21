@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public ManagmentController managmentController;
     public Timer_Controller timerController;
     public Animation_On_Click _Click;
+    public Panel_Ui_State state;
+    public DeleteTrash trash;
+    public Platform_Manager GetPlatform;
 
     public bool isPlay = false;
 
@@ -21,6 +24,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         OnUpdateTimerForSpawn();
+        Debug.Log(isPlay);
+        GetPlatform.OnSetWhenWe_GameOver(isPlay);
     }
 
     public void OnUpdateTimerForSpawn()
@@ -35,16 +40,20 @@ public class GameManager : MonoBehaviour
     {
         isPlay = false;
         managmentController.isControlling = false;
+        state.OnSetActivePanelWhenActivePanel("GameOver");
         managmentController.SetController();
         _Click.OnStartAnimationGroup("Panel_GameOver");
     }
     public void OnPlayButtonGame()
     {
         if (isPlay) return;
+        timerController.CurrentTimer = 0;
+        timerController.PreviousTimer = 0;
         managmentController.isControlling = true;
         isPlay = true;
         managmentController.SetController();
         spawnFigures.Setting = figureSetting;
-        spawnFigures.OnStartSpawn(); 
+        spawnFigures.OnStartSpawn();
+        trash.OnStartTrueLastObject();
     }
 }

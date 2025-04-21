@@ -14,7 +14,9 @@ public class Timer_Controller : MonoBehaviour
     public void OnUpdateTime()
     {
         CurrentTimer += Time.deltaTime;
+        PreviousTimer = CurrentTimer;
         OnDisplayShowTimer();
+        OnSaveValueTimerLast();
     }
     public void OnDisplayShowTimer()
     {
@@ -24,11 +26,14 @@ public class Timer_Controller : MonoBehaviour
 
     public void OnSaveValueTimerLast()
     {
-        CurrentTimer = PreviousTimer;
+        Debug.Log("Save Timer");
+        Debug.Log($"Max Timer: {YG2.saves.maxTimer}");
+        PreviousTimer = CurrentTimer;
         if (PreviousTimer > YG2.saves.maxTimer)
         {
             YG2.saves.maxTimer = PreviousTimer;
             YG2.SaveProgress();
         }
+
     }
 }
