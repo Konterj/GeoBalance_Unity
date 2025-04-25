@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 348450055}
   - component: {fileID: 348450056}
   - component: {fileID: 348450057}
+  - component: {fileID: 348450058}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -865,6 +866,7 @@ MonoBehaviour:
   state: {fileID: 348450056}
   trash: {fileID: 63290885}
   GetPlatform: {fileID: 1932776110}
+  TransitionDelete: {fileID: 348450058}
   isPlay: 0
 --- !u!4 &348450051
 Transform:
@@ -907,6 +909,7 @@ MonoBehaviour:
   SizeFigures: {x: 0, y: 0, z: 0}
   timeMax: 5
   timeMin: 3
+  Figures: []
 --- !u!114 &348450053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,6 +1774,20 @@ MonoBehaviour:
   PreviousTimer: 0
   TimerText: {fileID: 30566621}
   TimerRecords: {fileID: 1238317318}
+--- !u!114 &348450058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348450049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea14a7c9a6c64248a7d68406665dfd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingFigure: {fileID: 348450052}
+  DurationTransition: 0.85
 --- !u!1 &395187612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 1246.8}
+  m_AnchoredPosition: {x: -0.00024414062, y: 1246.8}
   m_SizeDelta: {x: 0, y: -0.00018311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &853551077
@@ -2748,7 +2765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978082000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2875,6 +2892,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039198408}
   m_CullTransparentMesh: 1
+--- !u!1 &1097950068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097950071}
+  - component: {fileID: 1097950070}
+  - component: {fileID: 1097950069}
+  m_Layer: 0
+  m_Name: Delete_False_IsPlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1097950069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097950068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4091c0da2b4ac4bbc9dbe11f38da02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 348450050}
+--- !u!61 &1097950070
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097950068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01891613, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17.797384, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1097950071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097950068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173759860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4562,7 +4651,7 @@ MonoBehaviour:
   platform: {fileID: 1932776108}
   minFrequency: 0.05
   maxFrequency: 5
-  DurationSmooth: 1
+  DurationSmooth: 2
   LerpTime: 0
 --- !u!1 &2002116741
 GameObject:

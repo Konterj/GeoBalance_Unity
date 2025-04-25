@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public Panel_Ui_State state;
     public DeleteTrash trash;
     public Platform_Manager GetPlatform;
+    public TransitionDeleteLastFigures TransitionDelete;
 
     public bool isPlay = false;
-
     void Start()
     {
         isPlay = false; // Убедимся, что игра не идет
@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         OnUpdateTimerForSpawn();
-        Debug.Log(isPlay);
         GetPlatform.OnSetWhenWe_GameOver(isPlay);
     }
 
@@ -47,6 +46,7 @@ public class GameManager : MonoBehaviour
     public void OnPlayButtonGame()
     {
         if (isPlay) return;
+        TransitionDelete.OnStartDeleteFigures();
         timerController.CurrentTimer = 0;
         timerController.PreviousTimer = 0;
         managmentController.isControlling = true;

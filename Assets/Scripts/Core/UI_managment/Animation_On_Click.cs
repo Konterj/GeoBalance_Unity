@@ -122,7 +122,6 @@ public class Animation_On_Click : MonoBehaviour
             {
                 element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
             }
-            Debug.Log("Change start pose in end pose");
             yield return null;
         }
 

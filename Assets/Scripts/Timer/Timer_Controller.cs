@@ -26,8 +26,6 @@ public class Timer_Controller : MonoBehaviour
 
     public void OnSaveValueTimerLast()
     {
-        Debug.Log("Save Timer");
-        Debug.Log($"Max Timer: {YG2.saves.maxTimer}");
         PreviousTimer = CurrentTimer;
         if (PreviousTimer > YG2.saves.maxTimer)
         {

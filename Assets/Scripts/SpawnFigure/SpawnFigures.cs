@@ -15,6 +15,8 @@ public class SpawnFigures : MonoBehaviour
     //private var
     float Times;
     float AvergeValueForScaleMass;
+    //Figures Temp var for save
+    [SerializeField] public List<Transform> Figures;
 
     public void OnStartSpawn()
     {
@@ -44,8 +46,8 @@ public class SpawnFigures : MonoBehaviour
 
         //Spawn random figures
         int spawnRandomFigure = Random.Range(0, figures.Count);
-        Instantiate(figures[spawnRandomFigure], SpawnPoints[SpawnPointRandom].transform.position, Quaternion.identity, null);
-        //Timer for random spawn
+        var Figure = Instantiate(figures[spawnRandomFigure], SpawnPoints[SpawnPointRandom].transform.position, Quaternion.identity, null);
+        Figures.Add(Figure);
 
     }
 
