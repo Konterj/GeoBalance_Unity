@@ -1,232 +1,232 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using static ElementAnimate;
+﻿    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+    using static ElementAnimate;
 
-public class Animation_On_Click : MonoBehaviour
-{
-    [Header("Одиночные анимации (не обязательны)")]
-    [SerializeField] public List<ElementAnimate> elementAnim;
-
-    [Header("Группы анимаций")]
-    [SerializeField] private List<AnimationGroup> groups;
-
-    public Panel_Ui_State state;
-
-    private void Start()
+    public class Animation_On_Click : MonoBehaviour
     {
-        foreach (var anim in elementAnim)
-        {
-            anim.OnSetDefaultValue();
-        }
+        [Header("Одиночные анимации (не обязательны)")]
+        [SerializeField] public List<ElementAnimate> elementAnim;
 
-        foreach (var group in groups)
+        [Header("Группы анимаций")]
+        [SerializeField] private List<AnimationGroup> groups;
+
+        public Panel_Ui_State state;
+
+        private void Start()
         {
-            foreach (var element in group.elements)
+            foreach (var anim in elementAnim)
             {
-                element.OnSetDefaultValue();
+                anim.OnSetDefaultValue();
+            }
+
+            foreach (var group in groups)
+            {
+                foreach (var element in group.elements)
+                {
+                    element.OnSetDefaultValue();
+                }
             }
         }
-    }
-    public void OnStartAnimationGroup(string groupName)
-    {
-        var group = groups.Find(g => g.name == groupName);
-        if (group != null)
+        public void OnStartAnimationGroup(string groupName)
         {
-            StartCoroutine(PlayAnimationGroupParallel(group.elements));
-        }
-        else
-        {
-            Debug.LogWarning($"Group '{groupName}' not found.");
-        }
-    }
-
-    public void OnStartAnimationNoParallel()
-    {
-        StartCoroutine(PlayAnimationsWithoutParallel());
-    }
-
-    private IEnumerator PlayAnimationsWithoutParallel()
-    {
-        foreach(var anim in elementAnim)
-        {
-            float t_time = 0f;
-            while(t_time < anim.Duration)
+            var group = groups.Find(g => g.name == groupName);
+            if (group != null)
             {
-                t_time += Time.deltaTime / anim.Duration;
-                PlaySingleElement(anim);
-                yield return anim;
+                StartCoroutine(PlayAnimationGroupParallel(group.elements));
+            }
+            else
+            {
+                Debug.LogWarning($"Group '{groupName}' not found.");
             }
         }
-    }
 
-    private IEnumerator PlayAnimationGroupParallel(List<ElementAnimate> elements)
-    {
-        List<Coroutine> coroutines = new List<Coroutine>();
-
-        foreach (var element in elements)
+        public void OnStartAnimationNoParallel()
         {
-            if(element.objectUI.GetComponent<Button>() != null)
-            {
-                element.objectUI.GetComponent<Button>().enabled = false;
-            }
-            coroutines.Add(StartCoroutine(PlaySingleElement(element)));
+            StartCoroutine(PlayAnimationsWithoutParallel());
         }
 
-        foreach (var c in coroutines)
+        private IEnumerator PlayAnimationsWithoutParallel()
         {
-            yield return c;
-        }
-        foreach (var element in elements)
-        {
-            if (element.objectUI.GetComponent<Button>() != null)
+            foreach(var anim in elementAnim)
             {
-                Debug.Log("ObjectUI true button");
-                element.objectUI.GetComponent<Button>().enabled = true;
+                float t_time = 0f;
+                while(t_time < anim.Duration)
+                {
+                    t_time += TimeDeltaControl.AnimDeltaTime / anim.Duration;
+                    PlaySingleElement(anim);
+                    yield return anim;
+                }
             }
         }
-        Debug.Log("✅ All animations in group completed.");
-        //state.OnSetActivePanel();
-    }
 
-    private IEnumerator PlaySingleElement(ElementAnimate element)
-    {
-        switch (element.SetAnim)
+        private IEnumerator PlayAnimationGroupParallel(List<ElementAnimate> elements)
         {
-            case AnimationSet.AnimationOut:
-                yield return AnimateOut(element);
-                break;
-            case AnimationSet.AnimationIn:
-                yield return AnimateIn(element);
-                break;
-            case AnimationSet.FadeOut:
-                OnFadeOut(element);
-                break;
-            case AnimationSet.FadeIn:
-                OnFadeIn(element);
-                break;
+            List<Coroutine> coroutines = new List<Coroutine>();
+
+            foreach (var element in elements)
+            {
+                if(element.objectUI.GetComponent<Button>() != null)
+                {
+                    element.objectUI.GetComponent<Button>().enabled = false;
+                }
+                coroutines.Add(StartCoroutine(PlaySingleElement(element)));
+            }
+
+            foreach (var c in coroutines)
+            {
+                yield return c;
+            }
+            foreach (var element in elements)
+            {
+                if (element.objectUI.GetComponent<Button>() != null)
+                {
+                    Debug.Log("ObjectUI true button");
+                    element.objectUI.GetComponent<Button>().enabled = true;
+                }
+            }
+            Debug.Log("✅ All animations in group completed.");
+            //state.OnSetActivePanel();
         }
-    }
 
-    private IEnumerator AnimateOut(ElementAnimate element)
-    {
-        float currentTime = 0f;
-        while (currentTime < element.Duration)
+        private IEnumerator PlaySingleElement(ElementAnimate element)
         {
-            currentTime += Time.deltaTime;
-            float t = Mathf.Clamp01(currentTime / element.Duration);
-            float curveT = element.moveEffect.Evaluate(t);
+            switch (element.SetAnim)
+            {
+                case AnimationSet.AnimationOut:
+                    yield return AnimateOut(element);
+                    break;
+                case AnimationSet.AnimationIn:
+                    yield return AnimateIn(element);
+                    break;
+                case AnimationSet.FadeOut:
+                    OnFadeOut(element);
+                    break;
+                case AnimationSet.FadeIn:
+                    OnFadeIn(element);
+                    break;
+            }
+        }
+
+        private IEnumerator AnimateOut(ElementAnimate element)
+        {
+            float currentTime = 0f;
+            while (currentTime < element.Duration)
+            {
+                currentTime += TimeDeltaControl.AnimDeltaTime;
+                float t = Mathf.Clamp01(currentTime / element.Duration);
+                float curveT = element.moveEffect.Evaluate(t);
+
+                if (element.objectUI != null)
+                {
+                    element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
+                }
+                yield return null;
+            }
 
             if (element.objectUI != null)
             {
-                element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
-            }
-            yield return null;
-        }
-
-        if (element.objectUI != null)
-        {
             
-            element.objectUI.anchoredPosition = element.endPose;
+                element.objectUI.anchoredPosition = element.endPose;
+            }
         }
-    }
 
-    private IEnumerator AnimateIn(ElementAnimate element)
-    {
-        float currentTime = 1f;
-        while (currentTime < element.Duration)
+        private IEnumerator AnimateIn(ElementAnimate element)
         {
-            currentTime -= Time.deltaTime;
-            float t = Mathf.Clamp01(currentTime / element.Duration);
-            float curveT = element.moveEffect.Evaluate(t);
+            float currentTime = 1f;
+            while (currentTime < element.Duration)
+            {
+                currentTime -= TimeDeltaControl.AnimDeltaTime;
+                float t = Mathf.Clamp01(currentTime / element.Duration);
+                float curveT = element.moveEffect.Evaluate(t);
+
+                if (element.objectUI != null)
+                {
+                    element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
+                }
+
+                yield return null;
+            }
 
             if (element.objectUI != null)
             {
-                element.objectUI.anchoredPosition = Vector2.LerpUnclamped(element.startPose, element.endPose, curveT);
+                element.objectUI.anchoredPosition = element.startPose;
             }
-
-            yield return null;
         }
 
-        if (element.objectUI != null)
+        private void OnFadeIn(ElementAnimate element)
         {
-            element.objectUI.anchoredPosition = element.startPose;
-        }
-    }
-
-    private void OnFadeIn(ElementAnimate element)
-    {
-        if (element.canvasAlpha != null)
-        {
-            element.canvasAlpha.alpha = element.OriginalAlpha;
-        }
-    }
-
-    private void OnFadeOut(ElementAnimate element)
-    {
-        if (element.canvasAlpha != null)
-        {
-            element.canvasAlpha.alpha = 0f;
-        }
-    }
-}
-
-[System.Serializable]
-public class AnimationGroup
-{
-    public string name;
-    public List<ElementAnimate> elements;
-}
-[System.Serializable]
-public class ElementAnimate
-{
-    public string name = "UI Element";
-    public CanvasGroup canvasAlpha;
-    public AnimationCurve moveEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    public AnimationCurve FadeEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    public RectTransform objectUI;
-
-    public float Duration = 0.5f;
-
-    public Vector2 startPose;
-    public Vector2 endPose;
-
-    [HideInInspector] public float OriginalAlpha;
-
-    public enum AnimationSet
-    {
-        AnimationIn,
-        AnimationOut,
-        FadeIn,
-        FadeOut
-    }
-
-    public AnimationSet SetAnim;
-
-    public void OnSetDefaultValue()
-    {
-        if (objectUI != null)
-        {
-            if (startPose == Vector2.zero) 
+            if (element.canvasAlpha != null)
             {
-                startPose = objectUI.anchoredPosition;
+                element.canvasAlpha.alpha = element.OriginalAlpha;
             }
         }
 
-        if (canvasAlpha != null)
+        private void OnFadeOut(ElementAnimate element)
         {
+            if (element.canvasAlpha != null)
+            {
+                element.canvasAlpha.alpha = 0f;
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class AnimationGroup
+    {
+        public string name;
+        public List<ElementAnimate> elements;
+    }
+    [System.Serializable]
+    public class ElementAnimate
+    {
+        public string name = "UI Element";
+        public CanvasGroup canvasAlpha;
+        public AnimationCurve moveEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        public AnimationCurve FadeEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        public RectTransform objectUI;
+
+        public float Duration = 0.5f;
+
+        public Vector2 startPose;
+        public Vector2 endPose;
+
+        [HideInInspector] public float OriginalAlpha;
+
+        public enum AnimationSet
+        {
+            AnimationIn,
+            AnimationOut,
+            FadeIn,
+            FadeOut
+        }
+
+        public AnimationSet SetAnim;
+
+        public void OnSetDefaultValue()
+        {
+            if (objectUI != null)
+            {
+                if (startPose == Vector2.zero) 
+                {
+                    startPose = objectUI.anchoredPosition;
+                }
+            }
+
+            if (canvasAlpha != null)
+            {
+                OriginalAlpha = canvasAlpha.alpha;
+            }
+            else
+            {
+                OriginalAlpha = 1f;
+            }
+        }
+
+        public void OnSetValueForButton()
+        {
+            startPose = objectUI.anchoredPosition;
             OriginalAlpha = canvasAlpha.alpha;
         }
-        else
-        {
-            OriginalAlpha = 1f;
-        }
     }
-
-    public void OnSetValueForButton()
-    {
-        startPose = objectUI.anchoredPosition;
-        OriginalAlpha = canvasAlpha.alpha;
-    }
-}

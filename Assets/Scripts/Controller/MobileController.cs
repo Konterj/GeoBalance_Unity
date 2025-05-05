@@ -46,12 +46,12 @@ public class MobileController : MonoBehaviour
         //Left side
         if (touchLeft == 1 && platform.rotation < 80)
         {
-            platform.AddTorque(touchLeft * RotationSpeed * Time.fixedDeltaTime);
+            platform.AddTorque(touchLeft * RotationSpeed * TimeDeltaControl.ControlDeltaTime);
         }
         //Right side
         else if (touchRight == -1 && platform.rotation > -80)
         {
-            platform.AddTorque(touchRight * RotationSpeed * Time.fixedDeltaTime);
+            platform.AddTorque(touchRight * RotationSpeed * TimeDeltaControl.ControlDeltaTime);
         }
         if(platform.angularVelocity > 180 || platform.angularVelocity < -180)
         {

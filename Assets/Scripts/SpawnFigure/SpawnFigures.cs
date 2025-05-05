@@ -54,7 +54,7 @@ public class SpawnFigures : MonoBehaviour
     public void OnUpdateTimerSpawn()
     {
 
-        Times -= Time.deltaTime;
+        Times -= TimeDeltaControl.ControlDeltaTime;
         if (Times < 0)
         {
             OnRandomSpawn();

@@ -53,7 +53,7 @@ public class TransitionDeleteLastFigures : MonoBehaviour
 
         while (T_time <= 1f) 
         {
-            T_time += Time.deltaTime / DurationTransition;
+            T_time += TimeDeltaControl.AnimDeltaTime / DurationTransition;
             
             foreach (var Fig in SpriteRender)
             {

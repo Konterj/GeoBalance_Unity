@@ -19,7 +19,7 @@ public class PC_Controller : MonoBehaviour
 
         if (dir_Rotate < 0 && platform.rotation < MaxAngle || dir_Rotate > 0&&platform.rotation > -MaxAngle)
         {
-            platform.AddTorque(-dir_Rotate * Time.fixedDeltaTime);
+            platform.AddTorque(-dir_Rotate * TimeDeltaControl.ControlDeltaTime);
         }
         else
         {

@@ -13,7 +13,7 @@ public class Timer_Controller : MonoBehaviour
     [SerializeField] public TextMeshProUGUI TimerRecords;
     public void OnUpdateTime()
     {
-        CurrentTimer += Time.deltaTime;
+        CurrentTimer += TimeDeltaControl.ControlDeltaTime;
         PreviousTimer = CurrentTimer;
         OnDisplayShowTimer();
         OnSaveValueTimerLast();

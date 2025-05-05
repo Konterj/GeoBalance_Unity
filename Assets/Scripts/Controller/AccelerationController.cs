@@ -21,7 +21,7 @@ public class AccelerationController : MonoBehaviour
     {
         float dir_z = Input.acceleration.y;
         dir_z = Mathf.Clamp(dir_z, -0.5f, 0.5f);
-        float torque = dir_z * SpeedRotated * Time.fixedDeltaTime;
+        float torque = dir_z * SpeedRotated * TimeDeltaControl.ControlDeltaTime;
         
         if (torque > 0 && platform.angularVelocity < MaxAngularVelocity || torque < 0 && platform.angularVelocity > -MaxAngularVelocity) 
         {

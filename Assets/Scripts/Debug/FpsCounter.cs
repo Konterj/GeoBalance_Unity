@@ -15,7 +15,7 @@ public class FpsCounter : MonoBehaviour
     }
     void OnCalcueFps()
     {
-         fps = (int)(1f / Time.unscaledDeltaTime);
+         fps = (int)(1f / TimeDeltaControl.AnimDeltaTime);
     }
 
     void OnDisplayShowFPs()

@@ -16,12 +16,12 @@ public class Platform_Manager : MonoBehaviour
            
             if (isPlay)
             {
-                LerpTime += Time.deltaTime / DurationSmooth;
+                LerpTime += TimeDeltaControl.ControlDeltaTime / DurationSmooth;
                 platform.frequency = Mathf.Lerp(maxFrequency, minFrequency, LerpTime);
             }
             else
             {   
-                LerpTime -= Time.deltaTime / DurationSmooth;
+                LerpTime -= TimeDeltaControl.ControlDeltaTime / DurationSmooth;
                 platform.frequency = Mathf.Lerp(maxFrequency, minFrequency, LerpTime);
             }
         
