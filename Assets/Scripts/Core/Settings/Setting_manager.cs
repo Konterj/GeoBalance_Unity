@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Setting_manager : MonoBehaviour
 {
-    //SettingLaunchTheme Set_Theme
+    public Save_Settings Save_;
+    public ChangeMobileControll ChangeMobile;
 
     public void OnStartGetSave()
     {
-
+        ChangeMobile.AddListnersButtons();
+        Debug.Log("Mobile: " + YG2.saves.SaveController_ForMobile);
     }
-
-    public void OnSetSave()
-    {
-
-    }
-
     public void OnSetTheme()
     {
 

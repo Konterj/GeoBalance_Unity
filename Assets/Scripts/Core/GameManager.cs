@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Platform_Manager GetPlatform;
     public TransitionDeleteLastFigures TransitionDelete;
     public FalseOrTruePauseButton pauseBtn;
+    public Setting_manager Setting_Manager;
     public float DurationSlowly = 1f;
     public bool isPlay = false;
 
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Setting_Manager.OnStartGetSave();
         isPlay = false; // Убедимся, что игра не идет
         isPause = false;
     }

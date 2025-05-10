@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Save_Settings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public const string MobileController = "IsMobileController";
+    public void DefaultMobileController()
     {
-        
+       
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Contiue
 }

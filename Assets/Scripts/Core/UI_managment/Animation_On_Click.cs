@@ -100,12 +100,6 @@
                 case AnimationSet.AnimationIn:
                     yield return AnimateIn(element);
                     break;
-                case AnimationSet.FadeOut:
-                    OnFadeOut(element);
-                    break;
-                case AnimationSet.FadeIn:
-                    OnFadeIn(element);
-                    break;
             }
         }
 
@@ -154,22 +148,6 @@
                 element.objectUI.anchoredPosition = element.startPose;
             }
         }
-
-        private void OnFadeIn(ElementAnimate element)
-        {
-            if (element.canvasAlpha != null)
-            {
-                element.canvasAlpha.alpha = element.OriginalAlpha;
-            }
-        }
-
-        private void OnFadeOut(ElementAnimate element)
-        {
-            if (element.canvasAlpha != null)
-            {
-                element.canvasAlpha.alpha = 0f;
-            }
-        }
     }
 
     [System.Serializable]
@@ -184,7 +162,6 @@
         public string name = "UI Element";
         public CanvasGroup canvasAlpha;
         public AnimationCurve moveEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        public AnimationCurve FadeEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public RectTransform objectUI;
 
         public float Duration = 0.5f;
@@ -197,9 +174,7 @@
         public enum AnimationSet
         {
             AnimationIn,
-            AnimationOut,
-            FadeIn,
-            FadeOut
+            AnimationOut
         }
 
         public AnimationSet SetAnim;
