@@ -288,7 +288,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775253178}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1054,6 +1054,7 @@ GameObject:
   - component: {fileID: 348450061}
   - component: {fileID: 348450060}
   - component: {fileID: 348450062}
+  - component: {fileID: 348450063}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -1186,7 +1187,6 @@ MonoBehaviour:
   - name: Panel_Start
     elements:
     - name: Play_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1224,10 +1224,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 120}
       endPose: {x: 0, y: -120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Settings_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1265,10 +1263,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Records_btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1306,10 +1302,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Pause_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1347,10 +1341,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: 0}
       endPose: {x: -174, y: -160}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Bar_Timer
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1388,12 +1380,10 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: 0}
       endPose: {x: 0, y: -160}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: panel_Setting
     elements:
     - name: Play_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1431,10 +1421,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: 0, y: -120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Settings_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1472,10 +1460,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Records_btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1513,12 +1499,10 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: Panel_GameOver
     elements:
     - name: Pause_BTn
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1556,10 +1540,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: -174, y: -160}
       endPose: {x: -174, y: 140}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Bar_Timer
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1597,10 +1579,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: -160}
       endPose: {x: 0, y: 240}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: GameOverPanel
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1638,10 +1618,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: -1079.997}
       endPose: {x: 0, y: 0}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Play Button
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1679,12 +1657,10 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: 0}
       endPose: {x: 0, y: 60}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: Panel_Restart
     elements:
     - name: Panel_GameOver
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1722,10 +1698,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: 0.0001}
       endPose: {x: 0, y: 1078.7}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Play_BTNW
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1763,10 +1737,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: -120}
       endPose: {x: 0, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: setting_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1804,10 +1776,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -157}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Records_btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1845,12 +1815,10 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -406}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: Panel_Pause_show
     elements:
     - name: panel-pause
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1888,10 +1856,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 820}
       endPose: {x: 0, y: 0}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: panel-pause btn play
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1929,10 +1895,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: 0, y: 60}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: panel-pause btn return
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -1970,10 +1934,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0}
       endPose: {x: 0, y: 60}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Pause BTN
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2011,12 +1973,10 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: -160}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: Panel_Pause_close
     elements:
     - name: panel-pause
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2054,10 +2014,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0.0012}
       endPose: {x: 0, y: 820}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Pause_Btn
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2095,12 +2053,10 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -160}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: Panel_Return_StartPanel
     elements:
     - name: panel-pause
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2129,10 +2085,8 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: 0.0001, y: 0.0001}
       endPose: {x: 0, y: 820}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Pause_Button
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2161,10 +2115,8 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: -174, y: -160}
       endPose: {x: -174, y: 174}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Play_Button
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2193,10 +2145,8 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: 0, y: -120}
       endPose: {x: 0, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Settings
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2225,10 +2175,8 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -157}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Records
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2257,10 +2205,8 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -406}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: Bar_Time
-      canvasAlpha: {fileID: 636366582}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2289,12 +2235,10 @@ MonoBehaviour:
       Duration: 1.5
       startPose: {x: 0, y: -160}
       endPose: {x: 0, y: 120}
-      OriginalAlpha: 0
       SetAnim: 1
   - name: ShowPanelSettings
     elements:
     - name: PanelSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2332,10 +2276,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: 0, y: 1000}
       endPose: {x: 0, y: 0}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: PanelSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2373,10 +2315,8 @@ MonoBehaviour:
       Duration: 2
       startPose: {x: -157, y: 0}
       endPose: {x: -157, y: -80}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: BTnSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2414,10 +2354,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: -157}
       endPose: {x: -174, y: 120}
-      OriginalAlpha: 1
       SetAnim: 1
     - name: Records_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2455,10 +2393,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: -406}
       endPose: {x: -174, y: 406}
-      OriginalAlpha: 1
       SetAnim: 1
     - name: PlayBTN
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2496,12 +2432,10 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 120}
       endPose: {x: 0, y: -120}
-      OriginalAlpha: 1
       SetAnim: 1
   - name: ClosePanelSettings
     elements:
     - name: PanelSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2539,10 +2473,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: 0.0001}
       endPose: {x: 0, y: 1000}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: PanelSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2580,10 +2512,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -157, y: -80}
       endPose: {x: -157, y: 0}
-      OriginalAlpha: 0
       SetAnim: 1
     - name: PanelSettings
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2621,10 +2551,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -157}
-      OriginalAlpha: 1
       SetAnim: 1
     - name: Records_Btn
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2662,10 +2590,8 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: -174, y: 120}
       endPose: {x: -174, y: -406}
-      OriginalAlpha: 1
       SetAnim: 1
     - name: PlayBTN
-      canvasAlpha: {fileID: 422996898}
       moveEffect:
         serializedVersion: 2
         m_Curve:
@@ -2703,7 +2629,6 @@ MonoBehaviour:
       Duration: 1
       startPose: {x: 0, y: -120}
       endPose: {x: 0, y: 120}
-      OriginalAlpha: 1
       SetAnim: 1
   state: {fileID: 348450056}
 --- !u!114 &348450056
@@ -2934,6 +2859,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01045078f2c82f44194cfadadec0b269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &348450063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348450049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ead6cf4d07bf1645a4cebcb92fcea10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationSmooth: 0.25
+  ButtonInBar: {fileID: 990985417}
+  value: 0
+  theme: 0
 --- !u!1 &363410409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,7 +3890,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775253178}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4237,7 +4178,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 368164540}
-  - {fileID: 1626713543}
   - {fileID: 46610196}
   - {fileID: 1886746955}
   - {fileID: 652283522}
@@ -4865,7 +4805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.433, y: -0.00023174}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 96.867, y: 93.948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990985417
@@ -6555,18 +6495,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626713542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 990985416}
-  m_Father: {fileID: 775253178}
-  m_RootOrder: 1
+  m_Father: {fileID: 2013877682}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 233.63, y: -257.99}
+  m_AnchoredPosition: {x: 233.66418, y: -257.865}
   m_SizeDelta: {x: 187.89502, y: 93.94751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626713544
@@ -7239,7 +7179,7 @@ RectTransform:
   - {fileID: 1225183218}
   - {fileID: 1437279049}
   m_Father: {fileID: 775253178}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7679,8 +7619,9 @@ RectTransform:
   m_Children:
   - {fileID: 1966387002}
   - {fileID: 1120675611}
+  - {fileID: 1626713543}
   m_Father: {fileID: 775253178}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7941,7 +7882,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775253178}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

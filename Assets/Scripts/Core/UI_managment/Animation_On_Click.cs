@@ -160,7 +160,6 @@
     public class ElementAnimate
     {
         public string name = "UI Element";
-        public CanvasGroup canvasAlpha;
         public AnimationCurve moveEffect = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public RectTransform objectUI;
 
@@ -168,8 +167,6 @@
 
         public Vector2 startPose;
         public Vector2 endPose;
-
-        [HideInInspector] public float OriginalAlpha;
 
         public enum AnimationSet
         {
@@ -188,20 +185,10 @@
                     startPose = objectUI.anchoredPosition;
                 }
             }
-
-            if (canvasAlpha != null)
-            {
-                OriginalAlpha = canvasAlpha.alpha;
-            }
-            else
-            {
-                OriginalAlpha = 1f;
-            }
         }
 
         public void OnSetValueForButton()
         {
             startPose = objectUI.anchoredPosition;
-            OriginalAlpha = canvasAlpha.alpha;
         }
     }
