@@ -8,13 +8,13 @@
     "modules": [
         {
             "name": "PluginYG2",
-            "version": "2.0031",
+            "version": "2.0041",
             "download": "https://max-games.ru/public/pluginYG2/other/PluginYG2.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/"
         },
         {
             "name": "YandexGames",
-            "version": "1.003",
+            "version": "1.004",
             "download": "https://max-games.ru/public/pluginYG2/platforms/YandexGames.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/yandexgames/",
             "platform": true
@@ -25,8 +25,7 @@
             "download": "https://boosty.to/maximalist/posts/75f8b5d7-6d88-4de7-a94d-e27750bc445d?share=post_link",
             "noLoad": true,
             "doc": "https://max-games.ru/crazy/",
-            "platform": true,
-            "critical": true
+            "platform": true
         },
         {
             "name": "GameMonetize",
@@ -38,7 +37,7 @@
         },
         {
             "name": "InterstitialAdv",
-            "version": "1.002",
+            "version": "1.003",
             "download": "https://max-games.ru/public/pluginYG2/modules/InterstitialAdv.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/inter-ad/"
         },
@@ -50,28 +49,29 @@
         },
         {
             "name": "EnvirData",
-            "version": "1.002",
+            "version": "1.0031",
             "download": "https://max-games.ru/public/pluginYG2/modules/EnvirData.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/envir/"
         },
         {
             "name": "Authorization",
-            "version": "1.01",
+            "version": "1.022",
             "download": "https://max-games.ru/public/pluginYG2/modules/Authorization.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/auth/"
         },
         {
             "name": "Storage",
-            "version": "1.01",
+            "version": "1.02",
             "download": "https://max-games.ru/public/pluginYG2/modules/Storage.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/storage/"
         },
         {
             "name": "PlayerStats",
-            "version": "1.001",
+            "version": "1.01",
             "download": "https://max-games.ru/public/pluginYG2/modules/PlayerStats.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/storage/",
-            "dependencies": "Authorization"
+            "dependencies": "Authorization",
+            "critical": true
         },
         {
             "name": "RedefinePlayerPrefs",
@@ -81,14 +81,14 @@
         },
         {
             "name": "Leaderboards",
-            "version": "1.0",
+            "version": "1.01",
             "download": "https://max-games.ru/public/pluginYG2/modules/Leaderboards.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/lb/",
             "dependencies": "Authorization"
         },
         {
             "name": "Localization",
-            "version": "1.001",
+            "version": "1.0011",
             "download": "https://max-games.ru/public/pluginYG2/modules/Localization.unitypackage",
             "doc": "https://max-games.ru/plugin-yg/doc/lang/"
         },
